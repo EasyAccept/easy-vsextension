@@ -1,0 +1,41 @@
+{
+  "name": "easyaccept",
+  "displayName": "EasyAccept",
+  "description": "A VSCode extension to use EasyAccept test suite",
+  "version": "1.0.0",
+  "repository": "https://github.com/EasyAccept/easy-vsextension",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "easyaccept",
+        "aliases": [
+          "EasyAccept",
+          "easyaccept"
+        ],
+        "extensions": [
+          ".easy"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "easyaccept",
+        "scopeName": "source.easy",
+        "path": "./syntaxes/easyaccept.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "build": "npx js-yaml ./syntaxes/easyaccept.tmLanguage.yaml > ./syntaxes/easyaccept.tmLanguage.json"
+  }
+}

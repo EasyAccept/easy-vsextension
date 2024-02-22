@@ -1,0 +1,7 @@
+# Testing call multiple commands
+echo Testing call multiple commands
+us5_command1
+us5_command2 Calling event=us__5__event1
+us5_command3 Exiting event=us__5__event1
+us5_command1
+quit

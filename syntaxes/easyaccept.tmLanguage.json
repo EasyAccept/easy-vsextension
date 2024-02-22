@@ -1,0 +1,59 @@
+{
+  "name": "easyaccept",
+  "scopeName": "source.easy",
+  "patterns": [
+    {
+      "name": "comment.line.easy",
+      "match": "^#.*"
+    },
+    {
+      "name": "entity.name.command.easy",
+      "patterns": [
+        {
+          "include": "#predefined-command"
+        },
+        {
+          "include": "#custom-command"
+        }
+      ]
+    },
+    {
+      "name": "entity.name.named-argument.easy",
+      "match": "([a-zA-Z0-9_\\-]+)=",
+      "captures": {
+        "1": {
+          "name": "entity.name.variable.easy"
+        }
+      }
+    },
+    {
+      "name": "string.unquoted.easy",
+      "match": "[a-zA-Z0-9_\\-]+"
+    }
+  ],
+  "repository": {
+    "predefined-command": {
+      "name": "entity.name.predefined-command.easy",
+      "patterns": [
+        {
+          "include": "#echo-command"
+        },
+        {
+          "include": "#quit-command"
+        }
+      ]
+    },
+    "custom-command": {
+      "name": "keyword.command.custom-command.easy",
+      "match": "^[a-zA-Z0-9_]+"
+    },
+    "echo-command": {
+      "name": "keyword.control.command.echo.easy",
+      "match": "^echo"
+    },
+    "quit-command": {
+      "name": "keyword.control.quit.easy",
+      "match": "^quit"
+    }
+  }
+}

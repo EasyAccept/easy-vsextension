@@ -10,6 +10,7 @@
   "categories": [
     "Programming Languages"
   ],
+  "publisher": "EasyAccept",
   "contributes": {
     "languages": [
       {

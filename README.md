@@ -10,6 +10,10 @@ This is a extension for Visual Studio Code that provides support for the EasyAcc
 
 ## Release Notes
 
+### 1.0.1
+
+- Added Publisher to package.json
+
 ### 1.0.0
 
 - Initial release of EasyAccept extension.
